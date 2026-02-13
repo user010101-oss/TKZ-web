@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -39,7 +39,6 @@ header {
 h1 {
     font-size: 65px;
     color: #ffffff;
-    font-weight: bold;
 }
 
 .subtitle {
@@ -74,7 +73,7 @@ h1 {
     border: 1px solid rgba(255,255,255,0.1);
     font-size: 20px;
     font-weight: bold;
-    color: #ffffff; /* تم التأكيد على اللون الأبيض */
+    color: #ffffff;
 }
 
 .card:hover {
@@ -107,7 +106,11 @@ footer {
     width: 80%;
     max-width: 400px;
     animation: pop 0.4s ease;
-    color: #ffffff;
+}
+
+/* يخلي كل الكلام جوه المودال أبيض مهما كان */
+.modal-content * {
+    color: #ffffff !important;
 }
 
 @keyframes pop {
@@ -119,7 +122,6 @@ footer {
     float: right;
     cursor: pointer;
     font-size: 22px;
-    color: #ffffff;
 }
 </style>
 </head>
