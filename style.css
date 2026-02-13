@@ -1,0 +1,106 @@
+ {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    color: white;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(-45deg, #1a001f, #0f0f0f, #2a0033, #000);
+    background-size: 400% 400%;
+    animation: gradientMove 10s ease infinite;
+    z-index: -1;
+}
+
+@keyframes gradientMove {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+header {
+    padding: 60px 20px;
+}
+
+h1 {
+    font-size: 55px;
+    color: #d400ff;
+}
+
+.subtitle {
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+#search {
+    padding: 12px;
+    width: 250px;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    text-align: center;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    padding: 40px;
+}
+
+.card {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.4s;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 0 25px #d400ff;
+}
+
+footer {
+    padding: 20px;
+    color: #777;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #1a001f;
+    padding: 40px;
+    border-radius: 20px;
+    width: 80%;
+    max-width: 400px;
+    animation: pop 0.4s ease;
+}
+
+@keyframes pop {
+    from {transform: scale(0.7); opacity: 0;}
+    to {transform: scale(1); opacity: 1;}
+}
+
+.close {
+    float: right;
+    cursor: pointer;
+    font-size: 22px;
+}
