@@ -74,6 +74,7 @@ h1 {
     border: 1px solid rgba(255,255,255,0.1);
     font-size: 20px;
     font-weight: bold;
+    color: #ffffff; /* تم التأكيد على اللون الأبيض */
 }
 
 .card:hover {
@@ -106,6 +107,7 @@ footer {
     width: 80%;
     max-width: 400px;
     animation: pop 0.4s ease;
+    color: #ffffff;
 }
 
 @keyframes pop {
@@ -117,6 +119,7 @@ footer {
     float: right;
     cursor: pointer;
     font-size: 22px;
+    color: #ffffff;
 }
 </style>
 </head>
