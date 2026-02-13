@@ -1,11 +1,21 @@
- {
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Animated Card UI</title>
+
+<style>
+body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
-    color: white;
+    color: #ffffff;
+    font-weight: bold;
     text-align: center;
     overflow-x: hidden;
 }
 
+/* Background */
 .background {
     position: fixed;
     width: 100%;
@@ -27,13 +37,14 @@ header {
 }
 
 h1 {
-    font-size: 55px;
-    color: #d400ff;
+    font-size: 65px;
+    color: #ffffff;
+    font-weight: bold;
 }
 
 .subtitle {
-    color: #ccc;
-    margin-bottom: 20px;
+    color: #ffffff;
+    font-size: 20px;
 }
 
 #search {
@@ -43,6 +54,7 @@ h1 {
     border: none;
     outline: none;
     text-align: center;
+    font-weight: bold;
 }
 
 .container {
@@ -60,16 +72,18 @@ h1 {
     cursor: pointer;
     transition: 0.4s;
     border: 1px solid rgba(255,255,255,0.1);
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .card:hover {
     transform: translateY(-10px) scale(1.05);
-    box-shadow: 0 0 25px #d400ff;
+    box-shadow: 0 0 15px #ffffff, 0 0 40px #ffffff88;
 }
 
 footer {
     padding: 20px;
-    color: #777;
+    color: #ffffff;
 }
 
 /* Modal */
@@ -104,3 +118,56 @@ footer {
     cursor: pointer;
     font-size: 22px;
 }
+</style>
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<header>
+    <h1>My Awesome Site</h1>
+    <p class="subtitle">Search and explore</p>
+    <input type="text" id="search" placeholder="Search...">
+</header>
+
+<div class="container">
+    <div class="card" onclick="openModal('Card 1')">Card 1</div>
+    <div class="card" onclick="openModal('Card 2')">Card 2</div>
+    <div class="card" onclick="openModal('Card 3')">Card 3</div>
+    <div class="card" onclick="openModal('Card 4')">Card 4</div>
+</div>
+
+<footer>
+    © 2026 My Website
+</footer>
+
+<!-- Modal -->
+<div class="modal" id="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 id="modal-title"></h2>
+        <p>This is some example content inside the modal.</p>
+    </div>
+</div>
+
+<script>
+function openModal(title) {
+    document.getElementById("modal-title").innerText = title;
+    document.getElementById("modal").style.display = "flex";
+}
+
+function closeModal() {
+    document.getElementById("modal").style.display = "none";
+}
+
+window.onclick = function(e) {
+    const modal = document.getElementById("modal");
+    if (e.target === modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>
